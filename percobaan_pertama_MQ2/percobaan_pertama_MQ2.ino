@@ -20,5 +20,9 @@ void setup()
 void loop()
 {
   Serial.println(analogRead(gasPin));
+ 
+  if (analogRead(gasPin)>200) {
+    Serial.println("Los niveles de Gas estan altos");
+  }
   delay(1000); // Print value every 1 sec.
 }
